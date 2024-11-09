@@ -3,7 +3,7 @@ require('path')
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   basePath:'/IoT-ASE-Demo',
-  output: 'export',
+  output: 'standalone',
   sassOptions: {
     // includePaths: [path.join(__dirname, 'styles')]
   },
