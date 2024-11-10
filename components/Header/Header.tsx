@@ -24,8 +24,8 @@ export const Header = () => {
     >
       <Flex align="center" gap="3">
         <NextLink href="/">
-          <Heading as="h2" size="4" style={{ maxWidth: 200 }}>
-            ChatGPT Lite
+          <Heading as="h2" size="4" style={{ maxWidth: 300 }}>
+            Agentic Search Engine For IoT
           </Heading>
         </NextLink>
         <Flex align="center" gap="3" className="ml-auto">
