@@ -35,7 +35,7 @@ const postChatOrQuestion = async (chat: Chat, messages: any[], input: string) =>
   const url = 'https://eager-macaque-legible.ngrok-free.app/query'
 
   const data = {
-    "threadId": "533",
+    "threadId": chat.id,
     text: input}
   //   messages: [...messages!],
   //   input

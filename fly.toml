@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for iot-ase-demo-long-smoke-9660 on 2024-11-09T17:15:16-05:00
+# fly.toml app configuration file generated for iot-ase-demo-morning-brook-6041 on 2024-11-09T20:03:26-05:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'iot-ase-demo-long-smoke-9660'
+app = 'iot-ase-demo-morning-brook-6041'
 primary_region = 'yyz'
 
 [build]
