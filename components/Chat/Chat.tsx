@@ -32,16 +32,21 @@ export interface ChatGPInstance {
 }
 
 const postChatOrQuestion = async (chat: Chat, messages: any[], input: string) => {
-  const url = '/api/chat'
+  const url = 'https://eager-macaque-legible.ngrok-free.app/query'
 
   const data = {
-    prompt: chat?.persona?.prompt,
-    messages: [...messages!],
-    input
-  }
+    "threadId": "533",
+    text: input}
+  //   messages: [...messages!],
+  //   input
+  // }
+  // const data ={
+  //   "text": "hello",
+  //   "threadId":"asd2"
+  // }
 
   return await fetch(url, {
-    method: 'POST',
+    method: 'PUT',
     headers: {
       'Content-Type': 'application/json'
     },
@@ -86,7 +91,6 @@ const Chat = (props: ChatProps, ref: any) => {
 
           if (response.ok) {
             const data = response.body
-
             if (!data) {
               throw new Error('No data')
             }
@@ -116,12 +120,15 @@ const Chat = (props: ChatProps, ref: any) => {
             }
             // The delay of timeout can not be 0 as it will cause the message to not be rendered in racing condition
             setTimeout(() => {
+                 // Parse the accumulated resultContent as JSON and access the 'answer' key
+              const parsedData = JSON.parse(resultContent);
+              const answer = parsedData.answer;
               if (debug) {
                 console.log({ resultContent })
               }
               conversation.current = [
                 ...conversation.current,
-                { content: resultContent, role: 'assistant' }
+                { content: answer, role: 'assistant' }
               ]
 
               setCurrentMessage('')
