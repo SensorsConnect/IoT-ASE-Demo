@@ -4,10 +4,13 @@ import { useCallback, useState } from 'react'
 import { HamburgerMenuIcon } from '@radix-ui/react-icons'
 import { Avatar, Flex, Heading, IconButton, Select, Tooltip } from '@radix-ui/themes'
 import cs from 'classnames'
+import Image from 'next/image'
 import NextLink from 'next/link'
 import { FaAdjust, FaGithub, FaMoon, FaRegSun } from 'react-icons/fa'
 import { Link } from '../Link'
 import { useTheme } from '../Themes'
+import darkIcon from '/public/dark-icon.png'
+import lightIcon from '/public/light-icon.png'
 
 export const Header = () => {
   const { theme, setTheme } = useTheme()
@@ -23,9 +26,14 @@ export const Header = () => {
       style={{ backgroundColor: 'var(--color-background)' }}
     >
       <Flex align="center" gap="3">
+        {theme === 'dark' ? (
+          <Image src={darkIcon} alt="Dark Mode Icon" width={100} height={100} />
+        ) : (
+          <Image src={lightIcon} alt="Light Mode Icon" width={100} height={100} />
+        )}
         <NextLink href="/">
           <Heading as="h2" size="4" style={{ maxWidth: 300 }}>
-            Agentic Search Engine For IoT
+          Agentic Search Engine For IoT
           </Heading>
         </NextLink>
         <Flex align="center" gap="3" className="ml-auto">
