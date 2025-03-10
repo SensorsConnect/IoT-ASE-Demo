@@ -27,9 +27,9 @@ export const Header = () => {
     >
       <Flex align="center" gap="3">
         {theme === 'dark' ? (
-          <Image src={darkIcon} alt="Dark Mode Icon" width={100} height={100} />
+          <Image src={darkIcon} alt="Dark Mode Icon" width={70} height={70} />
         ) : (
-          <Image src={lightIcon} alt="Light Mode Icon" width={100} height={100} />
+          <Image src={lightIcon} alt="Light Mode Icon" width={70} height={70} />
         )}
         <NextLink href="/">
           <Heading as="h2" size="4" style={{ maxWidth: 300 }}>
