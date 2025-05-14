@@ -32,7 +32,7 @@ export interface ChatGPInstance {
 }
 
 const postChatOrQuestion = async (chat: Chat, messages: any[], input: string) => {
-  const url = 'https://eager-macaque-legible.ngrok-free.app/query'
+  const url = 'http://184.73.3.134/query'
 
   const data = {
     "threadId": chat.id,
