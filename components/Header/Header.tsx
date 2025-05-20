@@ -32,8 +32,8 @@ export const Header = () => {
           <Image src={lightIcon} alt="Light Mode Icon" width={70} height={70} />
         )}
         <NextLink href="/">
-          <Heading as="h2" size="4" style={{ maxWidth: 300 }}>
-            Agentic Search Engine For IoT
+          <Heading as="h3" size="3" style={{ maxWidth: 400 }} className="text-gray-900 dark:text-white">
+          LocaleLive: Agentic Search Engine For IoT
           </Heading>
         </NextLink>
         <Flex align="center" gap="3" className="ml-auto">
