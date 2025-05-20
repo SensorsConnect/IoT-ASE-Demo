@@ -130,7 +130,7 @@ export default function Home() {
           <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md">
             <h3 className="text-xl font-semibold mb-4 text-center dark:text-white">Smart Features</h3>
             <p className="text-gray-600 dark:text-gray-300 text-center">
-              Our AI assistant continuously learns from your preferences and combines them with real-time data to provide the most relevant recommendations for your current needs.
+              🧠 Our AI assistant continuously learns from your preferences and combines them with real-time data to provide the most relevant recommendations for your current needs.
             </p>
           </div>
         </div>
@@ -140,15 +140,15 @@ export default function Home() {
       <div className="container mx-auto px-4 py-16">
       <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md max-w-4xl mx-auto text-center">
         {/* <div className="bg-white dark:bg-gray-800 rounded-lg p-12 text-center"> */}
-          <h2 className="text-3xl font-bold text-white dark:text-white mb-6">
-            Ready to Get Started?
+          <h2 className="text-3xl font-bold text-gray-800  dark:text-white mb-6">
+            🚀 Ready to Experience LocaleLive?
           </h2>
           <p className="text-xl text-gray-900 dark:text-gray-300 mb-8">
-            Try our demo now and experience the future of IoT management.
+            Try our demo now and discover real-time insights about places around you - from crowd levels to personalized recommendations.
           </p>
           <Link
             href="/chat"
-            className="inline-block bg-blue-600 text-white  dark:bg-gray-700 dark:text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors"
+            className="inline-block bg-blue-600 text-white  dark:text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors"
           >
             Launch Demo
           </Link>
