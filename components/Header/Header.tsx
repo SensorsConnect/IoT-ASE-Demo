@@ -14,7 +14,7 @@ import lightIcon from '/public/light-icon.png'
 
 export const Header = () => {
   const { theme, setTheme } = useTheme()
-  const [, setShow] = useState(false)
+  const [show, setShow] = useState(false)
 
   const toggleNavBar = useCallback(() => {
     setShow((state) => !state)
@@ -33,10 +33,18 @@ export const Header = () => {
         )}
         <NextLink href="/">
           <Heading as="h2" size="4" style={{ maxWidth: 300 }}>
-          Agentic Search Engine For IoT
+            Agentic Search Engine For IoT
           </Heading>
         </NextLink>
         <Flex align="center" gap="3" className="ml-auto">
+          <nav className="hidden md:flex items-center gap-6">
+            <NextLink href="/" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
+              Home
+            </NextLink>
+            <NextLink href="/chat" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
+              Chat
+            </NextLink>
+          </nav>
           <Avatar
             color="gray"
             size="2"
@@ -74,6 +82,19 @@ export const Header = () => {
           </IconButton>
         </Tooltip>
       </Flex>
+      {/* Mobile Navigation Menu */}
+      {show && (
+        <div className="md:hidden mt-4 pb-4">
+          <nav className="flex flex-col gap-4">
+            <NextLink href="/" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
+              Home
+            </NextLink>
+            <NextLink href="/chat" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
+              Chat
+            </NextLink>
+          </nav>
+        </div>
+      )}
     </header>
   )
 }
