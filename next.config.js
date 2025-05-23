@@ -11,6 +11,15 @@ const nextConfig = {
     fetches: {
       fullUrl: true
     }
+  },
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        destination: 'https://localelive.space/:path*',
+        permanent: true,
+      },
+    ]
   }
 }
 
